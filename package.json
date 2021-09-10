@@ -3,6 +3,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
+    "only-deploy": "gh-pages -d dist",
     "dev": "webpack serve --config ./bundler/webpack.dev.js"
   },
   "dependencies": {
@@ -28,5 +29,8 @@
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
