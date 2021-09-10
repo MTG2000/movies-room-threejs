@@ -3,10 +3,10 @@ import { addToLoadingManager } from "../loader";
 
 const reqs = {
   models: {
-    data: "/models/pop_corn/scene.gltf",
+    data: "models/pop_corn/scene.gltf",
   },
   textures: {
-    texture: "/models/pop_corn/textures/blinn3_baseColor.jpeg",
+    texture: "models/pop_corn/textures/blinn3_baseColor.jpeg",
   },
 };
 addToLoadingManager(reqs);

@@ -7,8 +7,8 @@ import { addToLoadingManager } from "../loader";
 const reqs = {
   models: {},
   textures: {
-    woodTexture1: "/textures/floor-texture.jpg",
-    woodTexture2: "/textures/wall-texture.jpg",
+    woodTexture1: "textures/floor-texture.jpg",
+    woodTexture2: "textures/wall-texture.jpg",
   },
 };
 addToLoadingManager(reqs);

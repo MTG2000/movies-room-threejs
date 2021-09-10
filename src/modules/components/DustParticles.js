@@ -27,7 +27,7 @@ export function createDustParticles() {
 
   const uniforms = {
     pointTexture: {
-      value: new THREE.TextureLoader().load("/textures/dust.png"),
+      value: new THREE.TextureLoader().load("textures/dust.png"),
     },
   };
 

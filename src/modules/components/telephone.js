@@ -6,11 +6,11 @@ import { addToLoadingManager } from "../loader";
 
 const reqs = {
   models: {
-    data: "/models/telephone/scene.gltf",
+    data: "models/telephone/scene.gltf",
   },
   textures: {
-    texture: "/models/telephone/textures/Material_57_baseColor.png",
-    metalicMap: "/models/telephone/textures/Material_57_metallicRoughness.png",
+    texture: "models/telephone/textures/Material_57_baseColor.png",
+    metalicMap: "models/telephone/textures/Material_57_metallicRoughness.png",
   },
 };
 addToLoadingManager(reqs);

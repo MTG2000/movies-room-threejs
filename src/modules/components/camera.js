@@ -1,7 +1,7 @@
 import { addToLoadingManager } from "../loader";
 const reqs = {
   models: {
-    data: "/models/camera/scene.gltf",
+    data: "models/camera/scene.gltf",
   },
 };
 addToLoadingManager(reqs);

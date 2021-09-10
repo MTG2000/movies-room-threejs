@@ -6,11 +6,11 @@ import { addToLoadingManager } from "../loader";
 
 const reqs = {
   models: {
-    tableData: "/models/wooden_table/scene.gltf",
+    tableData: "models/wooden_table/scene.gltf",
   },
   textures: {
-    texture: "/models/wooden_table/textures/Material_baseColor.jpeg",
-    metalicMap: "/models/wooden_table/textures/Material_metallicRoughness.png",
+    texture: "models/wooden_table/textures/Material_baseColor.jpeg",
+    metalicMap: "models/wooden_table/textures/Material_metallicRoughness.png",
   },
 };
 addToLoadingManager(reqs);

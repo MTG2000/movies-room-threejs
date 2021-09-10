@@ -3,7 +3,7 @@ import { addToLoadingManager } from "../loader";
 
 const reqs = {
   models: {
-    data: "/models/tomons_desk_lamp/scene.gltf",
+    data: "models/tomons_desk_lamp/scene.gltf",
   },
   textures: {},
 };

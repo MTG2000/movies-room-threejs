@@ -1,10 +1,8 @@
 const { createTable } = require("./table");
 import * as THREE from "three";
-import { createCinemaCamera } from "./camera";
 import { createTopTable } from "./topTable";
 import { createCredits } from "./Credits";
 import { createProjectionCanvas } from "./ProjectionCanvas";
-import { loop } from "../../script";
 
 export const createStuffGroup = async () => {
   const root = new THREE.Object3D();

@@ -24,7 +24,7 @@ export async function createTopTable() {
   lamb.rotateY(-MathUtils.degToRad(160));
   root.add(lamb);
 
-  const cdsGroup = createCdsGroup("/movies/the-dark-knight-min.jpg");
+  const cdsGroup = createCdsGroup("movies/the-dark-knight-min.jpg");
   cdsGroup.position.set(0.2, 0, 0.2);
   root.add(cdsGroup);
 

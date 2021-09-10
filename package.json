@@ -1,6 +1,7 @@
 {
   "repository": "#",
   "license": "UNLICENSED",
+  "homepage": "https://mtg2000.github.io/movies-room-threejs/",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "only-deploy": "gh-pages -d dist",
