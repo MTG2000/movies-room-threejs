@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pop Corn
+* source:	https://sketchfab.com/3d-models/pop-corn-c634fde3642d472d9679d989ea0f57c5
+* author:	Emmabrain (https://sketchfab.com/Emmabrain)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pop Corn" (https://sketchfab.com/3d-models/pop-corn-c634fde3642d472d9679d989ea0f57c5) by Emmabrain (https://sketchfab.com/Emmabrain) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
