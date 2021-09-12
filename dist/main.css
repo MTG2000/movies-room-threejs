@@ -81,6 +81,13 @@ body {
   transform: translateX(-50%);
 }
 
+#go {
+  display: none;
+  position: relative;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
 .email-form {
   position: absolute;
   top: 50%;
