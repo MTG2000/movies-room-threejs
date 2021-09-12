@@ -1,39 +1,6 @@
 import { LoadingManager, TextureLoader } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/gltfloader";
 
-const manager = new LoadingManager();
-manager.onStart = function (url, itemsLoaded, itemsTotal) {
-  console.log(
-    "Started loading file: " +
-      url +
-      ".\nLoaded " +
-      itemsLoaded +
-      " of " +
-      itemsTotal +
-      " files."
-  );
-};
-
-manager.onLoad = function () {
-  console.log("Loading complete!");
-};
-
-manager.onProgress = function (url, itemsLoaded, itemsTotal) {
-  console.log(
-    "Loading file: " +
-      url +
-      ".\nLoaded " +
-      itemsLoaded +
-      " of " +
-      itemsTotal +
-      " files."
-  );
-};
-
-manager.onError = function (url) {
-  console.log("There was an error loading " + url);
-};
-
 const modelLoader = new GLTFLoader();
 const texturesLoader = new TextureLoader();
 
@@ -60,28 +27,53 @@ export function addToLoadingManager(reqs) {
     }
 }
 
-export async function startLoading() {
-  let totalItems = modelsToLoad.length + texturesToLoad.length;
+let totalItems = 1,
+  loadedItems = 0;
 
-  let loadedItems = 0;
+export async function startLoading() {
+  totalItems += modelsToLoad.length + texturesToLoad.length;
+
+  loadedItems = 0;
   for (const item of modelsToLoad) {
     item.reqs.models[item.key] = await modelLoader.loadAsync(item.url);
     loadedItems++;
-    updateLoadingUI(loadedItems / totalItems);
+    updateLoadingUI(true);
   }
 
   for (const item of texturesToLoad) {
     item.reqs.textures[item.key] = await texturesLoader.loadAsync(item.url);
     loadedItems++;
-    updateLoadingUI(loadedItems / totalItems);
+    updateLoadingUI(true);
   }
 }
 
+const bgMusicUrl = "bg-music.mp3";
+
 const progressBar = document.querySelector(".progress-bar-in");
-function updateLoadingUI(progress) {
+function updateLoadingUI(canFinish) {
+  const progress = loadedItems / totalItems;
   progressBar.style.transform = `scaleX(${progress})`;
-  if (progress + 0.0001 >= 1)
-    document.querySelector(".loading").style.visibility = "hidden";
+  if (canFinish && progress + 0.0001 >= 1) {
+    document.querySelector(".progress-bar-out").style.display = "none";
+    document.querySelector(".loading h2").textContent = "Loading Completed !!";
+    // console.log();
+    const goBtn = document.getElementById("go");
+    goBtn.style.display = "block";
+    goBtn.addEventListener("click", () => {
+      document.querySelector(".loading").style.visibility = "hidden";
+      var audio = new Audio(bgMusicUrl);
+      audio.play();
+    });
+  }
 }
 
-export const loadingManager = manager;
+(function preloadAudio() {
+  var audio = new Audio();
+  audio.addEventListener("canplaythrough", loadedAudio, false);
+  audio.src = bgMusicUrl;
+})();
+
+function loadedAudio() {
+  loadedItems++;
+  updateLoadingUI(false);
+}

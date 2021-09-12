@@ -68,7 +68,9 @@ export class Manager {
   }
 
   init() {
-    this.goto(PLACES.SCENE);
+    document.querySelector("#go").addEventListener("click", () => {
+      this.goto(PLACES.SCENE);
+    });
     document.querySelector("#scene button").addEventListener("click", () => {
       this.goto(PLACES.MOVIES);
     });
